@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-card>
+    <v-layout>
+      <toolBar />
+
+      <v-navigation-drawer class="bg-indigo" theme="dark" permanent>
+        <myContentDrawer />
+        <template v-slot:append>
+          <div class="pa-2">
+            <v-btn block> Button </v-btn>
+          </div>
+        </template>
+      </v-navigation-drawer>
+
+      <v-main>
+        <v-slide-y-transition mode="out-in">
+          <router-view />
+        </v-slide-y-transition>
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import toolBar from "@/components/ToolBar";
+import myContentDrawer from "@/components/Drawer"
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app",
+  components: { toolBar, myContentDrawer },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
