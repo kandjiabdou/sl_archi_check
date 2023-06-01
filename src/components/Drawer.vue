@@ -23,10 +23,11 @@ export default {
   data: function () {
     return {
       items: [
-        { icon: "sitemap", text: "Flux", action: "/" },
+        { icon: "home", text: "Acceuil", action: "/" },
+        { icon: "sitemap", text: "Flux Zabbix", action: "/flux" },
         { icon: "ip-network", text: "Etat VIP", action: "/vip" },
-        { icon: "wall-fire", text: "Firewall", action: "/firewall" },
-        { icon: "server", text: "Conf VRA", action: "/vra" },
+        { icon: "wall-fire", text: "Group Firewall", action: "/group" },
+        { icon: "server", text: "Conf VM VRA", action: "/confvm" },
       ],
     };
   },

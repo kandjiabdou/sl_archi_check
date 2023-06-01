@@ -1,13 +1,16 @@
 <template>
-  <div class="toolbar">
-    <v-app-bar dark color="indigo" clipped-left app>
-    
-      <v-img src="logo_archi_check.png" alt="logo_archi"></v-img>
-      <v-toolbar-title @click="goHome" class="white--text"
-        >Controle technique</v-toolbar-title
+  <v-app-bar dark color="indigo" clipped-left app>
+    <div class="d-flex align-center">
+      <v-img
+        height="50"
+        src="logo_archi_check.png"
+        alt="logo_archi"
+      ></v-img>
+      <v-toolbar-title @click="goHome"
+        >Outil de controle technique</v-toolbar-title
       >
-    </v-app-bar>
-  </div>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>
@@ -27,9 +30,8 @@ export default {
 </script>
 
 <style>
-.toolbar v-img {
-  margin-left: 30%;
-  width: 100px;
-  height: 100px;
+.v-toolbar-title__placeholder{
+  white-space: nowrap;
+  overflow: visible;
 }
 </style>

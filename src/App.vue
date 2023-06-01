@@ -1,31 +1,33 @@
 <template>
-  <v-card>
-    <v-layout>
-      <toolBar />
+  <v-layout>
+    <toolBar />
 
-      <v-navigation-drawer class="bg-indigo" theme="dark" permanent>
-        <myContentDrawer />
-        <template v-slot:append>
-          <div class="pa-2">
-            <v-btn block> Button </v-btn>
-          </div>
-        </template>
-      </v-navigation-drawer>
+    <v-navigation-drawer class="bg-indigo" theme="dark" permanent>
+      <myContentDrawer />
+    </v-navigation-drawer>
 
-      <v-main>
-        <v-slide-y-transition mode="out-in">
-          <router-view />
-        </v-slide-y-transition>
-      </v-main>
-    </v-layout>
-  </v-card>
+    <v-main class="main-container">
+      <router-view v-slot="{ Component }">
+        <transition>
+          <component :is="Component" />
+        </transition>
+      </router-view>
+    </v-main>
+  </v-layout>
 </template>
 
 <script>
 import toolBar from "@/components/ToolBar";
-import myContentDrawer from "@/components/Drawer"
+import myContentDrawer from "@/components/Drawer";
 export default {
   name: "app",
   components: { toolBar, myContentDrawer },
 };
 </script>
+
+<style>
+.main-container {
+  background-color: #e6edf1;
+  min-height: 100vh;
+}
+</style>
