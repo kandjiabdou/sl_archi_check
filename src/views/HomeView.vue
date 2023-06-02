@@ -146,7 +146,7 @@
                   </v-row>
                 </v-list-item>
               </v-card>
-            </v-col>
+            </v-col>  
             <v-col cols="6 pr-10 pb-10 pl-5">
               <v-card>
                 <v-img
