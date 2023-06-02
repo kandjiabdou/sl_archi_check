@@ -8,9 +8,9 @@ module.exports = defineConfig({
 		}
   },
   devServer :{
-    allowedHosts : "all",
+    allowedHosts: "all",
     client:{
-      WebSocketURL : 'auto://0.0.0.0:0/ws'
+      WebSocketURL: "auto://0.0.0.0:0/ws",
     }
   } 
 
