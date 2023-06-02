@@ -8,8 +8,7 @@ module.exports = defineConfig({
 		}
   },
   devServer :{
-    allowedHosts : "all",
-    disableHostCheck : true
-  }
+    allowedHosts : "all"
+  } 
 
 })
